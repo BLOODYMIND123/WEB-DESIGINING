@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Dashboard</title>
+
+    <style>
+        /* CSS styles for the fitness dashboard */
+        body {
+            font-family: , sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color:cyan;
+            <img src="image.jpg" alt="fitness image" width="300" hight="300" style="float:left">
+            color: #ff4040;
+            padding: 25px;
+            text-align: center;
+           
+        }
+        
+        nav {
+            background-color:pink;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav ul {
+            color:pink;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            color:dark green;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+        section {
+            padding: 20px;
+        }
+        
+        h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+        
+        form {
+            color:orange;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        label {
+            color:green;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"],
+        input[type="number"] {
+            padding: 5px;
+            width: 200px;
+        }
+        
+        input[type="submit"] {
+            background-color:baby pink;
+            border: none;
+            color: violet;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        table th,
+        table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        table th {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        footer {
+            background-color: #ff7256;
+            color: #00ffff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Dashboard</h1>
+
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#track-activities">Track Activities</a></li>
+            <li><a href="#set-goals">Set Goals</a></li>
+            <li><a href="#display-progress">Display Progress</a></li>
+        </ul>
+    </nav>
+    
+    <section id="track-activities">
+        <h2>Track Your Daily Activities</h2>
+        <form>
+            <label for="activity">Activity:</label>
+            <input type="text" id="activity" name="activity" required>
+            
+            <label for="duration">Duration (in minutes):</label>
+            <input type="number" id="duration" name="duration" min="1" required>
+            
+            <input type="submit" value="Add Activity">
+        </form>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody id="activity-list">
+                <!-- Activities will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+    
+    <section id="set-goals">
+
+        <h2>Set Your Fitness Goals</h2>
+        <form>
+            <label for="steps-goal">Steps Goal:</label>
+            <input type="number" id="steps-goal" name="steps-goal" min="0">
+            
+            <label for="distance-goal">Distance Goal (in miles):</label>
+            <input type="number" id="distance-goal" name="distance-goal" min="0">
+            
+            <label for="calories-goal">Calories Goal:</label>
+            <input type="number" id="calories-goal" name="calories-goal" min="0">
+            
+            <input type="submit" value="Set Goals">
+        </form>
+    </section>
+    
+    <section id="display-progress">
+        <h2>Display Your Progress</h2>
+        <div id="progress-chart"></div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2022 Fitness Dashboard. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
